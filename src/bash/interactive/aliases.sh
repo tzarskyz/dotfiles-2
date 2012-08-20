@@ -11,7 +11,7 @@ if shell_is_osx; then
 
     alias ls='ls -hF'
 elif shell_is_linux; then
-    alias ls='ls -hF --color'
+    alias ls='ls -hF'   # todo: better check for qnap
 fi
 
 # mkdir and cd there

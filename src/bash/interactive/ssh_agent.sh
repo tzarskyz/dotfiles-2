@@ -48,7 +48,7 @@ if [[ -n $SSH_AGENT_BIN && -n $SSH_ADD_BIN ]]; then
           . "${SSH_ENV}" > /dev/null
           #ps ${SSH_AGENT_PID} doesn't work under cywgin
           # todo: qnap's grep doesn't understand the $ :(
-          HAS_AGENT=`ps -ef | grep ${SSH_AGENT_PID} | grep "ssh-agent$"`
+          HAS_AGENT=`ps -ef | grep ${SSH_AGENT_PID} | grep "ssh-agent"`
           if [ -n "${HAS_AGENT}" ]; then
                echo 'Connected to existing SSH agent.'
           else
